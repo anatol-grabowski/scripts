@@ -1,0 +1,34 @@
+cmake \
+-DCMAKE_BUILD_TYPE=RELEASE \
+-DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-3.4.1/modules/ \
+-DWITH_CUDA=OFF \
+-DBUILD_ZLIB=ON \
+-DBUILD_JPEG=ON \
+-DBUILD_PNG=ON \
+-DBUILD_TIFF=ON \
+-DBUILD_TESTS=ON \
+-DBUILD_PERF_TESTS=ON \
+-DBUILD_DOCS=ON \
+-DWITH_OPENGL=ON \
+-DWITH_OPENCL=ON \
+-DWITH_IPP=ON \
+-DWITH_TBB=ON \
+-DWITH_EIGEN=ON \
+-DWITH_V4L=ON \
+-DWITH_GSTREAMER=ON \
+-DBUILD_opencv_js=OFF \
+-DBUILD_opencv_java=OFF \
+-DBUILD_opencv_python2=ON \
+-DBUILD_opencv_python3=ON \
+-DCMAKE_INSTALL_PREFIX=$(python3 -c "import sys; print(sys.prefix)") \
+-DPYTHON_EXECUTABLE=$(which python2) \
+-DPYTHON2_EXECUTABLE=$(which python2) \
+-DPYTHON2_LIBRARY=/usr/lib/python2.7/config-x86_64-linux-gnu/libpython2.7.so \
+-DPYTHON2_INCLUDE_DIR=$(python2 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
+-DPYTHON2_PACKAGES_PATH=$(python2 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
+-DPYTHON3_EXECUTABLE=$(which python3) \
+-DPYTHON3_LIBRARY=/home/tot/_tot/apps/anaconda3/pkgs/python-3.6.4-hc3d631a_3/lib/libpython3.6m.so \
+-DPYTHON3_INCLUDE_DIR=$(python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
+-DPYTHON3_PACKAGES_PATH=$(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
+-DPYTHON3_NUMPY_INCLUDE_DIRS=/home/tot/_tot/apps/anaconda3/envs/opencv-env/lib/python3.6/site-packages/numpy/core/include \
+../opencv-3.4.1/
