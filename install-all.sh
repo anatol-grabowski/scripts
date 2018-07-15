@@ -5,7 +5,7 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sud
 sudo apt-get update
 sudo apt install google-chrome-stable
 
-sudo apt install doublecmd-gtk gparted vlc vim deluge
+sudo apt install doublecmd-gtk gparted vlc vim deluge wine
 sudo apt install git curl xclip ffmpeg
 sudo apt install build-essential cmake pkg-config
 sudo apt install libx11-dev libatlas-base-dev libgtk-3-dev
