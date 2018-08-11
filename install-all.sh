@@ -18,13 +18,17 @@ additional_apps_to_apt_install=(
   gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools
 )
 
+function is_package_installed() {
+  dpkg -l "$1" > /dev/null 2>&1 \
+   && echo "package already installed: ""$app" \
+   || return 1
+}
+
 function apt_install_not_installed() {
   apps=("$@")
   not_installed_apps=()
   for app in "${apps[@]}" ; do
-    dpkg -l "$app" > /dev/null 2>&1 \
-    && echo "package already installed: ""$app" \
-    || not_installed_apps+=("$app")
+    is_package_installed "$app" || not_installed_apps+=("$app")
   done
 
   if [ "${#not_installed_apps[@]}" -ne 0 ] ; then
@@ -81,4 +85,10 @@ fi
 if !  command -v "nvm" ; then
   nvmurl="https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh"
   wget -O- "$nvmurl" | bash
+fi
+
+[ -s "$HOME/.bashrc" ] && \. "$HOME/.bashrc"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+if ! which "node" ; then
+  nvm install node
 fi
