@@ -20,8 +20,8 @@ additional_apps_to_apt_install=(
 
 function is_package_installed() {
   dpkg -l "$1" > /dev/null 2>&1 \
-   && echo "package already installed: ""$app" \
-   || return 1
+  && echo "package already installed: ""$app" \
+  || return 1
 }
 
 function apt_install_not_installed() {
@@ -85,10 +85,10 @@ fi
 if !  command -v "nvm" ; then
   nvmurl="https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh"
   wget -O- "$nvmurl" | bash
+  [ -s "$HOME/.bashrc" ] && \. "$HOME/.bashrc"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 fi
 
-[ -s "$HOME/.bashrc" ] && \. "$HOME/.bashrc"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 if ! which "node" ; then
   nvm install node
 fi
