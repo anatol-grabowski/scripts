@@ -1,0 +1,35 @@
+download only android tools (sdk)
+unpack to custom location '.../android/sdk' folder (tools folder is inside sdk folder)
+set ANDROID_HOME env var to point to android/sdk folder
+by sdk manager sdk/tools/android.bat download latest android sdk tools, android sdk platform-tools, android sdk build-tools, also sdk platform 16 (for compilation with javac+dx?)
+4 packages
+now can compile with jack or gradle plugin
+
+for compilation with javac+dx build-tools have to be below 24, javac below 8 (52)
+so download sdk build-tools 23.0.2
++1 package
+now can compile with javac
+
+download only android studio (without sdk tools)
+unpack it to '.../android/sdk/android-studio'
+then start android studio with internet off, skip wizard
+internet on, download android support repository from options
+create new project, latest sdk platform, constraintLayout and Solver for ConstraintLayout are downloaded automatically
++3 packages
+now can compile with android studio
+TOTAL 8 packages (constraintLayout and solver are not displayed in standalone sdk manager app)
+
+build one android project with default options
+after gradle caches dependencies for one project (appcompat, junit, etc.) it can be switched to offline mode
+
+to install apps via usb cable
+install driver for device (phone), google usb driver from sdk manager can be used (installed through device manager after downloading) then +1 package
+install adb driver for device through adb installer
+enable usb debugging on device, connect and test by 'adb devices'
+
+to use instant run feature intall sdk platform of the same version that your device is, then +1 package
+
+Studio settings
+dracula, no animations, widescreen layout, no spellchecking, no updates, no statistics, no reopen last, no synchronize files on frame or tab activation, gradle offline work,
+editor: change font size with ctrl+wheel, soft-wraps, highlight current scope, no caret blinking, method separators, no X for tabs, asterisks for tabs, tooltip delay 100, param descr delay 100
+code style for all languages: tabs, smart tabs, tab=2spaces
