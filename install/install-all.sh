@@ -3,11 +3,12 @@
 downloads_path="$HOME""/Downloads"
 
 apps_to_apt_install=(
-  git wget curl jq ffmpeg gitk
-  doublecmd-gtk gparted vlc vim deluge
+  git wget curl jq ffmpeg gitk net-tools
+  doublecmd-gtk gparted vlc vim deluge hardinfo
   xclip xdotool xbindkeys
-  tar xz-utils
-  build-essential cmake pkg-config
+  tar xz-utils unrar
+  exfat-utils exfat-fuse
+  build-essential cmake pkg-config screen
   libx11-dev libatlas-base-dev libgtk-3-dev
   python libboost-python-dev python-dev python-pip python3-dev python3-pip
 )
