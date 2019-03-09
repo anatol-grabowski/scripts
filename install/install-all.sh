@@ -3,7 +3,7 @@
 downloads_path="$HOME""/Downloads"
 
 apps_to_apt_install=(
-  git wget curl jq ffmpeg gitk net-tools
+  git sshfs wget curl jq ffmpeg gitk net-tools
   doublecmd-gtk gparted vlc vim deluge hardinfo
   xclip xdotool xbindkeys
   tar xz-utils unrar

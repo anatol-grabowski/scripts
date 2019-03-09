@@ -1,0 +1,8 @@
+/home/tot/.config/doublecmd/doublecmd.xml
+/home/tot/.config/Code/User/settings.json
+/home/tot/.config/deluge/core.conf
+/home/tot/.config/git/gitk
+/home/tot/.config/google-chrome/Default/Preferences
+/home/tot/.config/gtk-3.0/bookmarks
+/home/tot/.config/vlc/vlcrc
+/home/tot/.gitconfig
