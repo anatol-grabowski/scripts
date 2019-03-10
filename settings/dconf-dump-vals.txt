@@ -1,0 +1,7 @@
+/org/gnome/desktop/input-sources/sources=[('xkb', 'us'), ('xkb', 'ru')]
+/org/gnome/desktop/interface/cursor-size=32
+/org/gnome/desktop/screensaver/lock-enabled=false
+/org/gnome/system/location/enabled=false
+/org/gnome/settings-daemon/plugins/power/idle-dim=true
+/org/gnome/desktop/session/idle-delay=uint32 900
+/org/gnome/desktop/media-handling/autorun-never=true
