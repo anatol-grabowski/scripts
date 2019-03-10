@@ -1,4 +1,4 @@
-# INSTALLATION: wget -O - https://raw.githubuserconte.com/grabantot/scripts/master/install/install_caps_to_esc.sh | bash
+# INSTALLATION: wget -O - https://raw.githubusercontent.com/grabantot/scripts/master/install/install_caps_to_esc.sh | bash
 
 sudo apt-get install xdotool xbindkeys
 
