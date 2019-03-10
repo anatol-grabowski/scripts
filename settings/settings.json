@@ -1,0 +1,86 @@
+{
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.codeLens.enabled": false,
+  "git.confirmSync": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.tabCloseButton": "off",
+  "editor.tabSize": 2,
+  "editor.cursorBlinking": "solid",
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never",
+  "breadcrumbs.enabled": true,
+  "typescript.suggest.autoImports": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "[python]": {
+    "editor.tabSize": 4
+  },
+  "[makefile]": {
+    "editor.insertSpaces": false
+  },
+  "vim.easymotion": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.statusBarColorControl": false,
+  "vim.useSystemClipboard": false,
+  "vim.hlsearch": true,
+  "vim.handleKeys": {
+    "<C-s>": false,
+    "<C-[>": false,
+    "<C-]>": false,
+    "<C-w>": false,
+    "<C-n>": false,
+    "<C-f>": false,
+    "<C-h>": false,
+    "<C-k>": false,
+    "<C-z>": false,
+    "<C-y>": false,
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-a>"],
+      "after": ["g", "g", "V", "G"],
+    },
+    {
+      "before": ["<C-v>"],
+      "after": ["\"", "+", "p"],
+    },
+    {
+      "before": ["Enter"],
+      "after": ["o", "Esc"],
+    },
+    {
+      "before": ["u"],
+      "after": [],
+      "commands": [
+        { "command": "undo", "args": [] }
+      ]
+    },
+    {
+      "before": ["<C-r>"],
+      "after": [],
+      "commands": [
+        { "command": "redo", "args": [] }
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-c>"],
+      "after": ["\"", "+", "y"],
+    },
+    {
+      "before": ["<C-x>"],
+      "after": ["\"", "+", "d"],
+    },
+    {
+      "before": ["<C-v>"],
+      "after": ["\"", "+", "p"],
+    },
+    {
+      "before": ["BackSpace"],
+      "after": ["x"]
+    }
+  ]
+}

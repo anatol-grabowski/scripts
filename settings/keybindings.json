@@ -1,0 +1,10 @@
+[
+  {
+    "key": "ctrl+shift+down",
+    "command": "editor.emmet.action.balanceIn"
+  },
+  {
+    "key": "ctrl+shift+up",
+    "command": "editor.emmet.action.balanceOut"
+  }
+]

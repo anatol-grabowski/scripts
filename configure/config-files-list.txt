@@ -1,8 +1,14 @@
-/home/tot/.config/doublecmd/doublecmd.xml
-/home/tot/.config/Code/User/settings.json
-/home/tot/.config/deluge/core.conf
-/home/tot/.config/git/gitk
-/home/tot/.config/google-chrome/Default/Preferences
-/home/tot/.config/gtk-3.0/bookmarks
-/home/tot/.config/vlc/vlcrc
-/home/tot/.gitconfig
+doublecmd.xml     $HOME/.config/doublecmd/doublecmd.xml
+settings.json     $HOME/.config/Code/User/settings.json
+keybindings.json  $HOME/.config/Code/User/keybindings.json
+core.conf         $HOME/.config/deluge/core.conf
+gitk              $HOME/.config/git/gitk
+Preferences       $HOME/.config/google-chrome/Default/Preferences
+bookmarks         $HOME/.config/gtk-3.0/bookmarks
+vlcrc             $HOME/.config/vlc/vlcrc
+.gitconfig        $HOME/.gitconfig
+.condarc          $HOME/.condarc
+.pythonrc         $HOME/.pythonrc
+.vimrc            $HOME/.vimrc
+.xbindkeysrc      $HOME/.xbindkeysrc
+.selected_editor  $HOME/.selected_editor

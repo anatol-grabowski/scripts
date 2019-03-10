@@ -40,48 +40,8 @@ function apt_install_not_installed() {
   fi
 }
 
-function install_vscode_ext_from_github() {
-  # repo name: "user/repo"
-  # downlad path: "/home/user/Downloads"
-  url="https://api.github.com/repos/""$1""/releases/latest"
-  dowurl=`curl --silent "$url" | jq -r .assets[0].browser_download_url`
-  filename=`curl --silent "$url" | jq -r .assets[0].name`
-  dowpath="$2"/"$filename"
-  wget -O "$dowpath" "$dowurl"
-  code --install-extension "$dowpath"
-}
-
-
 apt_install_not_installed ${apps_to_apt_install[@]}
 apt_install_not_installed ${additional_apps_to_apt_install[@]}
-
-if ! which "google-chrome" ; then
-  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub \
-  | sudo apt-key add -
-  echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' \
-  | sudo tee /etc/apt/sources.list.d/google-chrome.list
-  sudo apt-get update
-  sudo apt install google-chrome-stable
-fi
-
-if ! which "code" ; then
-  microsoft_gpg_download_path="$downloads_path"/microsoft.gpg
-  curl https://packages.microsoft.com/keys/microsoft.asc \
-  | gpg --dearmor > "$microsoft_gpg_download_path"
-  sudo cp "$microsoft_gpg_download_path" "/etc/apt/trusted.gpg.d/microsoft.gpg"
-  sudo sh -c 'echo "deb [arch=amd64] \
-  https://packages.microsoft.com/repos/vscode stable main" \
-  > /etc/apt/sources.list.d/vscode.list'
-  sudo apt-get update
-  sudo apt-get install code
-fi
-
-if ! code --list-extensions | grep "gitlens" ; then
-  install_vscode_ext_from_github "eamodio/vscode-gitlens" "$downloads_path"
-fi
-if ! code --list-extensions | grep "bracket-pair-colorizer" ; then
-  install_vscode_ext_from_github "CoenraadS/BracketPair" "$downloads_path"
-fi
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 if !  command -v "nvm" ; then
