@@ -1,22 +1,10 @@
-debug_file=/dev/shm/xbindkeys.debug
+debug_file=/dev/shm/caps_to_esc.debug
 debug_msg () {
   echo $(date +%s%3N) "$@" >> $debug_file
 }
 
-caps_off () {
-  is_caps_on="false"
-  xset q | grep "Caps Lock:\s*on" && is_caps_on="true"
-  debug_msg "is_caps_on ""$is_caps_on"
-
-  [ "$is_caps_on" == "false" ] && return 3
-  debug_msg "Sending Caps Lock"
-  debug_msg "ignore_next"
-  xdotool key Caps_Lock
-}
-
 should_ignore="false"
 tail -n 1 $debug_file | grep "ignore_next" && should_ignore="true"
-
 if [ "$should_ignore" == "true" ]; then
   debug_msg "ignored"
   exit 1
@@ -50,8 +38,11 @@ is_wm_class_in_list () {
 }
 
 is_wm_class_in_list || exit 2
-xdotool keyup "Caps_Lock" # !!! very important
-debug_msg "Sending Escape"
-xdotool key "Escape"
-debug_msg "sent"
-caps_off
+xdotool keyup "Caps_Lock" key "Escape"
+debug_msg "sent Escape"
+
+if xset q | grep "Caps Lock:\s*on"; then
+  debug_msg "ignore_next"
+  xdotool key Caps_Lock
+  debug_msg "sent Caps_Lock"
+fi
