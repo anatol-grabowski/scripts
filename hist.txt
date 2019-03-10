@@ -1,0 +1,4 @@
+vlc Tools -> Preferences (Ctrl + P) -> Interface -> allow only one instance; enque items...
+vlc Tools -> Preferences (Ctrl + P) -> Video -> Always on top;
+Passwords and Keys -> Default keyring -> Chrome Safe Storage -> password: <empty>
+

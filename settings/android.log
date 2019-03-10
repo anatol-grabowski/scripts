@@ -29,7 +29,7 @@ enable usb debugging on device, connect and test by 'adb devices'
 
 to use instant run feature intall sdk platform of the same version that your device is, then +1 package
 
-Studio settings
+## Studio settings
 dracula, no animations, widescreen layout, no spellchecking, no updates, no statistics, no reopen last, no synchronize files on frame or tab activation, gradle offline work,
 editor: change font size with ctrl+wheel, soft-wraps, highlight current scope, no caret blinking, method separators, no X for tabs, asterisks for tabs, tooltip delay 100, param descr delay 100
 code style for all languages: tabs, smart tabs, tab=2spaces
