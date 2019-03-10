@@ -74,5 +74,17 @@
 Caps_Lock
 
 ## Alt + z toggles touchpad on/off
-"~/toggle_touchpad.sh"
+"bash $HOME/toggle_touchpad.sh"
 Alt+Mod2 + z
+
+## volume up
+"xdotool keyup w Alt key XF86AudioRaiseVolume keydown Alt"
+Alt + w
+
+## volume down
+"xdotool keyup s Alt key XF86AudioLowerVolume keydown Alt"
+Alt + s
+
+## volume mute
+"xdotool keyup x Alt key XF86AudioMute keydown Alt"
+Alt + x
