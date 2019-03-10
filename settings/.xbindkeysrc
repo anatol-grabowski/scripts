@@ -78,13 +78,13 @@ Caps_Lock
 Alt+Mod2 + z
 
 ## volume up
-"xdotool keyup w Alt key XF86AudioRaiseVolume keydown Alt"
+"xdotool keyup w key XF86AudioRaiseVolume"
 Alt + w
 
 ## volume down
-"xdotool keyup s Alt key XF86AudioLowerVolume keydown Alt"
+"xdotool keyup s key XF86AudioLowerVolume"
 Alt + s
 
 ## volume mute
-"xdotool keyup x Alt key XF86AudioMute keydown Alt"
+"xdotool keyup x key XF86AudioMute"
 Alt + x

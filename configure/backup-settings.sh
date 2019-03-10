@@ -1,3 +1,5 @@
+#!/bin/bash
+
 configs_list_file=$(dirname "$0")"/config-files-list.txt"
 dest_dir_path=$(dirname "$0")"/../settings"
 

@@ -1,0 +1,7 @@
+/org/gnome/desktop/input-sources/sources
+/org/gnome/desktop/interface/cursor-size
+/org/gnome/desktop/screensaver/lock-enabled
+/org/gnome/system/location/enabled
+/org/gnome/settings-daemon/plugins/power/idle-dim
+/org/gnome/desktop/session/idle-delay
+/org/gnome/desktop/media-handling/autorun-never
