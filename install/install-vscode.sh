@@ -1,3 +1,5 @@
+#!/bin/bash
+
 downloads_path="$HOME/Downloads"
 
 function install_vscode_ext_from_github() {

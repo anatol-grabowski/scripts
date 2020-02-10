@@ -3,8 +3,9 @@
 downloads_path="$HOME""/Downloads"
 
 apps_to_apt_install=(
-  git sshfs wget curl jq ffmpeg gitk net-tools
-  doublecmd-gtk gparted vlc vim deluge hardinfo
+  git sshfs wget curl vim jq ffmpeg gitk net-tools
+  doublecmd-gtk gparted vlc vim deluge
+  dconf-editor synaptic hardinfo
   xclip xdotool xbindkeys
   tar xz-utils unrar
   exfat-utils exfat-fuse
@@ -14,10 +15,11 @@ apps_to_apt_install=(
 )
 
 additional_apps_to_apt_install=(
-  wine-stable openjdk-11-jdk
-  libgstreamer1.0-0 gstreamer1.0-plugins-base
-  gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
-  gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools
+  wine-stable
+#  openjdk-11-jdk
+#  libgstreamer1.0-0 gstreamer1.0-plugins-base
+#  gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
+#  gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools
 )
 
 function is_package_installed() {
