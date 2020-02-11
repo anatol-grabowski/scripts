@@ -5,7 +5,7 @@ downloads_path="$HOME""/Downloads"
 apps_to_apt_install=(
   git sshfs wget curl vim jq ffmpeg gitk net-tools
   doublecmd-gtk gparted vlc vim deluge
-  dconf-editor synaptic hardinfo
+  dconf-editor gnome-tweaks synaptic hardinfo
   xclip xdotool xbindkeys
   tar xz-utils unrar
   exfat-utils exfat-fuse

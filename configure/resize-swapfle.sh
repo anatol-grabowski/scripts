@@ -1,7 +1,9 @@
+#!/bin/bash
+
 swapon --show
 
 sudo swapoff -av
-sudo dd if=/dev/zero of=/swapfile bs=1G count=8
+sudo dd if=/dev/zero of=/swapfile bs=1G count=16
 sudo mkswap /swapfile
 sudo swapon /swapfile
 
