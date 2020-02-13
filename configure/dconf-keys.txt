@@ -31,3 +31,6 @@
 /org/gnome/desktop/notifications/application/update-manager/show-banners
 /org/gnome/desktop/notifications/application/org-gnome-fileroller/show-banners
 /org/gnome/desktop/notifications/show-in-lock-screen
+/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/audible-bell
+/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/cursor-blink-mod
+/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-color
